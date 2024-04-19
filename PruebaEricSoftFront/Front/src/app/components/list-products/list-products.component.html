@@ -43,9 +43,9 @@
     <ng-container matColumnDef="Actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="toggleEdit(element)" *ngIf="!isEditing(element.productNo)">Editar</button>
-        <button mat-button (click)="saveChanges(element.productNo)" *ngIf="isEditing(element.productNo)">Guardar</button>
-        <button mat-button (click)="cancelEdit(element.productNo)" *ngIf="isEditing(element.productNo)">Cancelar</button>
+        <button mat-flat-button color="accent"(click)="toggleEdit(element)" *ngIf="!isEditing(element.productNo)">Editar</button>
+        <button mat-flat-button color="primary" (click)="saveChanges(element.productNo)" *ngIf="isEditing(element.productNo)">Guardar</button>
+        <button mat-flat-button color="warn" (click)="cancelEdit(element.productNo)" *ngIf="isEditing(element.productNo)" style="margin-left: 2px !important;" >Cancelar</button>
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
