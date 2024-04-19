@@ -1,12 +1,11 @@
 CREATE DATABASE PruebaEricSoft;
 
-USE PruebaEricSoft;
-
 CREATE TABLE Products (
     ProductNo INT PRIMARY KEY,
     ProductName VARCHAR(100),
     Quantity INT,
-    Price DECIMAL(10, 2)
+    Price INT,
+	FechaCreacion Date
 );
 
 CREATE TABLE FacturaH (
